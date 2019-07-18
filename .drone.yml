@@ -6,7 +6,7 @@ steps:
   image: ubuntu:bionic
   commands:
   - apt-get update
-  - apt-get install wget sudo make git repo -y
+  - apt-get install wget sudo source make git repo -y
   - sudo wget https://raw.githubusercontent.com/Fornax96/pdup/master/pdup -O "~/pdup" && sudo chmod +x "~/pdup"
   - git config --global user.name "Luke Williams"
   - git config --global user.email "luke@turbox.uk"
