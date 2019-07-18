@@ -5,6 +5,7 @@ steps:
 - name: build
   image: ubuntu:bionic
   commands:
+  - bash
   - apt-get update
   - apt-get install wget sudo make git repo -y
   - sudo wget https://raw.githubusercontent.com/Fornax96/pdup/master/pdup -O "~/pdup" && sudo chmod +x "~/pdup"
