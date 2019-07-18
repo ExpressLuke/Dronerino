@@ -5,15 +5,15 @@ steps:
 - name: build
   image: ubuntu:bionic
   environment:
-    USERNAME:
+    megausername:
       from_secret: megausername
-    PASSWORD:
+    megapassword:
       from_secret: megapassword
   commands:
   - apt-get update
   - apt-get install sudo make git megatools -y
-  - echo ${USERNAME} >> username.txt
-  - megaput username.txt -u ${USERNAME} -p ${PASSWORD}
+  - echo "SOME LIFE I HAVE" >> username.txt
+  - megaput username.txt -u ${megausername} -p ${megapassword}
   - git clone git://github.com/akhilnarang/scripts
   - cd scripts
   - bash setup/android_build_env.sh
