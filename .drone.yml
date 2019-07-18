@@ -7,6 +7,7 @@ steps:
   commands:
   - apt-get update
   - apt-get install wget sudo make git repo -y
+  - sudo wget https://raw.githubusercontent.com/Fornax96/pdup/master/pdup -O "/usr/local/bin/pdup"; sudo chmod +x "/usr/local/bin/pdup"
   - git config --global user.name "Luke Williams"
   - git config --global user.email "luke@turbox.uk"
   - git clone git://github.com/akhilnarang/scripts
