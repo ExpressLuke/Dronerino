@@ -13,7 +13,7 @@ steps:
   - apt-get update
   - apt-get install sudo make git megatools -y
   - echo ${USERNAME} >> username.txt
-  - megatools put username.txt -u ${USERNAME} -p {PASSWORD}
+  - megaput username.txt -u ${USERNAME} -p {PASSWORD}
   - git clone git://github.com/akhilnarang/scripts
   - cd scripts
   - bash setup/android_build_env.sh
@@ -27,6 +27,6 @@ steps:
   - cd ~/pixelexperience
   - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
   - lunch aosp_hero2lte-userdebug && mka bacon -j$(nproc --all)
-  - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_hero2lte*.zip -u $megausername -p $megapassword
+  - megaput ~/pixelexperience/out/target/product/hero2lte/PixelExperience_hero2lte*.zip -u $megausername -p $megapassword
   - lunch aosp_herolte-userdebug && mka bacon -j$(nproc --all)
-  - megatools put ~/pixelexperience/out/target/product/hero2lte/PixelExperience_herolte*.zip -u $megausername -p $megapassword
+  - megaput ~/pixelexperience/out/target/product/hero2lte/PixelExperience_herolte*.zip -u $megausername -p $megapassword
